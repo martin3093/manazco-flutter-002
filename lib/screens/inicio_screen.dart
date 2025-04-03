@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'static_screen.dart';
+import 'counter_screen.dart';
+import 'inicio_screen.dart';
+import 'acerca_de_screen.dart';
+import 'contacto_screen.dart';
 
 class InicioScreen extends StatelessWidget {
   const InicioScreen({super.key});
@@ -7,8 +12,39 @@ class InicioScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Inicio')),
-      body: const Center(
-        child: Text('Bienvenido', style: TextStyle(fontSize: 24)),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('Bienvenido', style: TextStyle(fontSize: 24)),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AcercaDeScreen(),
+                  ),
+                );
+              },
+              child: const Text('Ir a Acerca de'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ContactoScreen(),
+                  ),
+                );
+              },
+              child: const Text('Ir a Acerca de'),
+            ),
+
+            const SizedBox(height: 20),
+          ],
+        ),
       ),
     );
   }

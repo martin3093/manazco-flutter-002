@@ -20,26 +20,13 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const AcercaDeScreen(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const InicioScreen()),
                 );
               },
-              child: const Text('Ir a Acerca de'),
+              child: const Text('Inicio'),
             ),
             const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const ContactoScreen(),
-                  ),
-                );
-              },
-              child: const Text('Ir a Contacto'),
-            ),
-            const SizedBox(height: 20),
+
             ElevatedButton(
               onPressed: () {},
               child: const Text('Pantalla estática (StatelessWidget)'),
