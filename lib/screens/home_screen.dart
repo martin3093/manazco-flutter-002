@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'static_screen.dart';
 import 'counter_screen.dart';
+import 'inicio_screen.dart';
+import 'acerca_de_screen.dart';
+import 'contacto_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -13,13 +16,9 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const StaticScreen()),
-                );
-              },
+              onPressed: () {},
               child: const Text('Pantalla estática (StatelessWidget)'),
             ),
             const SizedBox(height: 20),
