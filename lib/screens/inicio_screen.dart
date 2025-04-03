@@ -6,9 +6,14 @@ import 'acerca_de_screen.dart';
 import 'contacto_screen.dart';
 import '../widgets/contador_widget.dart';
 
-class InicioScreen extends StatelessWidget {
+class InicioScreen extends StatefulWidget {
   const InicioScreen({super.key});
 
+  @override
+  State<InicioScreen> createState() => _InicioScreenState();
+}
+
+class _InicioScreenState extends State<InicioScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +46,7 @@ class InicioScreen extends StatelessWidget {
                   ),
                 );
               },
-              child: const Text('Ir a Acerca de'),
+              child: const Text('Contactos'),
             ),
 
             const SizedBox(height: 20),
