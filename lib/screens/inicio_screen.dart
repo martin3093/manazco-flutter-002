@@ -4,6 +4,7 @@ import 'counter_screen.dart';
 import 'inicio_screen.dart';
 import 'acerca_de_screen.dart';
 import 'contacto_screen.dart';
+import '../widgets/contador_widget.dart';
 
 class InicioScreen extends StatelessWidget {
   const InicioScreen({super.key});
@@ -17,6 +18,7 @@ class InicioScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text('Bienvenido', style: TextStyle(fontSize: 24)),
+            const ContadorWidget(), // Widget del contador
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
