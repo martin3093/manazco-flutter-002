@@ -16,6 +16,29 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AcercaDeScreen(),
+                  ),
+                );
+              },
+              child: const Text('Ir a Acerca de'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ContactoScreen(),
+                  ),
+                );
+              },
+              child: const Text('Ir a Contacto'),
+            ),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {},
